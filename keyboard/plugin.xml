@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="Keyboard"
+    version="1.0.2">
+
+    <name>Keyboard</name>
+    <description>Manages the onscreen keyboard</description>
+    <author>Oscar Brito - @aetheon</author>
+    <keywords>keyboardPlugin</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=2.2.0" />
+    </engines>
+
+    <asset src="www/Keyboard.js" target="plugins/Keyboard.js" />
+
+    <!-- 
+      android 
+      -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="plugins">
+            <plugin name="Keyboardlugin" value="com.custom.plugin.Keyboard"/>
+        </config-file>
+
+        <source-file src="src/android/com/custom/Keyboard.java" target-dir="src/com/custom/plugin" /> 
+
+    </platform>
+
+</plugin>
