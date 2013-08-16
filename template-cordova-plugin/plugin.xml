@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="PluginName"
-    version="0.0.0">
+    version="0.0.1">
 
     <name></name>
     <description></description>
@@ -15,7 +15,7 @@
 
 
     <!-- assets to be copied -->
-    <asset src="www/Keyboard.js" target="plugins/Keyboard.js" />
+    <asset src="www/PLUGIN.js" target="plugins/PLUGIN.js" />
 
     <!-- 
       android platform
@@ -23,10 +23,10 @@
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="Keyboardlugin" value="com.custom.plugin.Keyboard"/>
+            <plugin name="PLUGIN" value="com.custom.PLUGIN.PLUGIN"/>
         </config-file>
 
-        <source-file src="src/android/com/custom/Keyboard.java" target-dir="src/com/custom/plugin" /> 
+        <source-file src="src/android/com/custom/PLUGIN/PLUGIN.java" target-dir="src/com/custom/PLUGIN/" /> 
 
     </platform>
 

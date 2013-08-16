@@ -1,10 +1,8 @@
-/* oscar */
-define(
-    ["jquery", "cordova"], 
-    function($, cordova){
+
+cordova.define("cordova/plugin/KeyboardPlugin", function(require){
         "use strict";
 
-        var exec = cordova.require('cordova/exec');
+        var exec = require('cordova/exec');
 
         /*
          * Keyboard management native plugin
