@@ -3,7 +3,7 @@ package com.custom.DatePicker;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.apache.cordova.api.CallbackContext;
+import org.apache.cordova.CallbackContext;
 
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.widget.DatePicker;
