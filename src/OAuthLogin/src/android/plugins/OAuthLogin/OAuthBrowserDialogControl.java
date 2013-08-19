@@ -1,4 +1,4 @@
-package com.custom.OAuthLogin;
+package plugins.OAuthLogin;
 
 import java.io.Console;
 import java.net.MalformedURLException;

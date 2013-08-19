@@ -1,4 +1,4 @@
-package com.custom.OAuthLogin;
+package plugins.OAuthLogin;
 
 import java.util.HashMap;
 

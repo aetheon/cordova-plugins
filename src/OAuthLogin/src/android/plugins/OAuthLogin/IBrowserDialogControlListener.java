@@ -1,4 +1,4 @@
-package com.custom.OAuthLogin;
+package plugins.OAuthLogin;
 
 public interface IBrowserDialogControlListener {
 

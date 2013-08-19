@@ -1,4 +1,4 @@
-package com.custom.Keyboard;
+package plugins.Keyboard;
 
 import android.content.Context;
 import android.view.inputmethod.InputMethodManager;

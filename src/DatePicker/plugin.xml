@@ -23,12 +23,12 @@
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="DatePickerPlugin" value="com.custom.DatePicker.DatePickerPlugin"/>
+            <plugin name="DatePickerPlugin" value="plugins.DatePicker.DatePickerPlugin"/>
         </config-file>
 
-        <source-file src="src/android/com/custom/DatePicker/DatePickerPlugin.java" target-dir="src/com/custom/DatePicker/" /> 
-        <source-file src="src/android/com/custom/DatePicker/DateSetListener.java" target-dir="src/com/custom/DatePicker/" /> 
-        <source-file src="src/android/com/custom/DatePicker/TimeSetListener.java" target-dir="src/com/custom/DatePicker/" /> 
+        <source-file src="src/android/plugins/DatePicker/DatePickerPlugin.java" target-dir="src/plugins/DatePicker/" /> 
+        <source-file src="src/android/plugins/DatePicker/DateSetListener.java" target-dir="src/plugins/DatePicker/" /> 
+        <source-file src="src/android/plugins/DatePicker/TimeSetListener.java" target-dir="src/plugins/DatePicker/" /> 
         
     </platform>
 

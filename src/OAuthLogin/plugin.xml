@@ -23,15 +23,15 @@
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="OAuthLoginPlugin" value="com.custom.OAuthLogin.OAuthLoginPlugin"/>
+            <plugin name="OAuthLoginPlugin" value="plugins.OAuthLogin.OAuthLoginPlugin"/>
         </config-file>
 
-        <source-file src="src/android/com/custom/OAuthLogin/IBrowserDialogControlListener.java" target-dir="src/com/custom/OAuthLogin/" /> 
-        <source-file src="src/android/com/custom/OAuthLogin/OAuthBrowserDialogControl.java" target-dir="src/com/custom/OAuthLogin/" /> 
-        <source-file src="src/android/com/custom/OAuthLogin/OAuthLoginPlugin.java" target-dir="src/com/custom/OAuthLogin/" /> 
-        <source-file src="src/android/com/custom/OAuthLogin/OAuthWebView.java" target-dir="src/com/custom/OAuthLogin/" /> 
-        <source-file src="src/android/com/custom/OAuthLogin/UrlHelper.java" target-dir="src/com/custom/OAuthLogin/" /> 
-        <source-file src="src/android/com/custom/OAuthLogin/Cookie.java" target-dir="src/com/custom/OAuthLogin/" /> 
+        <source-file src="src/android/plugins/OAuthLogin/IBrowserDialogControlListener.java" target-dir="src/plugins/OAuthLogin/" /> 
+        <source-file src="src/android/plugins/OAuthLogin/OAuthBrowserDialogControl.java" target-dir="src/plugins/OAuthLogin/" /> 
+        <source-file src="src/android/plugins/OAuthLogin/OAuthLoginPlugin.java" target-dir="src/plugins/OAuthLogin/" /> 
+        <source-file src="src/android/plugins/OAuthLogin/OAuthWebView.java" target-dir="src/plugins/OAuthLogin/" /> 
+        <source-file src="src/android/plugins/OAuthLogin/UrlHelper.java" target-dir="src/plugins/OAuthLogin/" /> 
+        <source-file src="src/android/plugins/OAuthLogin/Cookie.java" target-dir="src/plugins/OAuthLogin/" /> 
 
     </platform>
 
