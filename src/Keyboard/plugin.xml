@@ -13,7 +13,7 @@
         <engine name="cordova" version=">=2.2.0" />
     </engines>
 
-    <js-module src="www/KeyboardPlugin.js" name="KeyboardPlugin">
+    <js-module src="www/KeyboardPlugin.js" name="cordova">
     </js-module>
 
     <!-- 

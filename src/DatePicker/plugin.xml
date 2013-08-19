@@ -15,7 +15,7 @@
 
 
     <!-- assets to be copied -->
-    <js-module src="www/DatePickerPlugin.js" name="DatePickerPlugin">
+    <js-module src="www/DatePickerPlugin.js" name="cordova">
     </js-module>
 
     <!-- 
