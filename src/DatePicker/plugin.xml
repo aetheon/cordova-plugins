@@ -15,7 +15,8 @@
 
 
     <!-- assets to be copied -->
-    <asset src="www/DatePickerPlugin.js" target="plugins/DatePickerPlugin.js" />
+    <js-module src="www/DatePickerPlugin.js" name="DatePickerPlugin">
+    </js-module>
 
     <!-- 
       android platform

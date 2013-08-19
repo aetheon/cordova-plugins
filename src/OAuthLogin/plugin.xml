@@ -15,7 +15,8 @@
 
 
     <!-- assets to be copied -->
-    <asset src="www/OAuthLoginPlugin.js" target="plugins/OAuthLoginPlugin.js" />
+    <js-module src="www/OAuthLoginPlugin.js" name="OAuthLoginPlugin">
+    </js-module>
 
     <!-- 
       android platform

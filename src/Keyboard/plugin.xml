@@ -13,7 +13,8 @@
         <engine name="cordova" version=">=2.2.0" />
     </engines>
 
-    <asset src="www/KeyboardPlugin.js" target="plugins/KeyboardPlugin.js" />
+    <js-module src="www/KeyboardPlugin.js" name="KeyboardPlugin">
+    </js-module>
 
     <!-- 
       android 
