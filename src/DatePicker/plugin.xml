@@ -15,7 +15,7 @@
 
 
     <!-- assets to be copied -->
-    <js-module src="www/DatePickerPlugin.js" name="DatePickerPlugin">
+    <js-module src="www/DatePickerPlugin.js" name="cordova">
     </js-module>
 
     <!-- 
@@ -23,8 +23,10 @@
       -->
     <platform name="android">
 
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="DatePickerPlugin" value="plugins.DatePicker.DatePickerPlugin"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DatePickerPlugin" >
+              <param name="android-package" value="plugins.DatePicker.DatePickerPlugin"/>
+            </feature>
         </config-file>
 
         <source-file src="src/android/plugins/DatePicker/DatePickerPlugin.java" target-dir="src/plugins/DatePicker/" /> 

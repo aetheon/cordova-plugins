@@ -15,7 +15,7 @@
 
 
     <!-- assets to be copied -->
-    <js-module src="www/OAuthLoginPlugin.js" name="OAuthLoginPlugin">
+    <js-module src="www/OAuthLoginPlugin.js" name="cordova">
     </js-module>
 
     <!-- 
@@ -23,8 +23,10 @@
       -->
     <platform name="android">
 
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="OAuthLoginPlugin" value="plugins.OAuthLogin.OAuthLoginPlugin"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="OAuthLoginPlugin" >
+              <param name="android-package" value="plugins.OAuthLogin.OAuthLoginPlugin"/>
+            </feature>
         </config-file>
 
         <source-file src="src/android/plugins/OAuthLogin/IBrowserDialogControlListener.java" target-dir="src/plugins/OAuthLogin/" /> 

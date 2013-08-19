@@ -13,7 +13,7 @@
         <engine name="cordova" version=">=2.2.0" />
     </engines>
 
-    <js-module src="www/KeyboardPlugin.js" name="KeyboardPlugin">
+    <js-module src="www/KeyboardPlugin.js" name="cordova">
     </js-module>
 
     <!-- 
@@ -21,8 +21,10 @@
       -->
     <platform name="android">
 
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="Keyboardlugin" value="plugins.Keyboard.KeyboardPlugin"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Keyboardlugin" >
+              <param name="android-package" value="plugins.Keyboard.Keyboardlugin"/>
+            </feature>
         </config-file>
 
         <source-file src="src/android/plugins/Keyboard/KeyboardPlugin.java" target-dir="src/plugins/Keyboard/" /> 
