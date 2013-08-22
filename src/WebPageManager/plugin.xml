@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="WebPageManager"
+    version="0.0.1">
+
+    <name>WebPageManager</name>
+    <description>Manage WebPage view. Smart hide on redirects and timeouts. </description>
+    <author>Oscar Brito</author>
+    <keywords>login, oauth, twitter, facebook</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=2.2.0" />
+    </engines>
+
+
+    <!-- assets to be copied -->
+    <js-module src="www/WebPageManagerPlugin.js" name="plugin">
+    </js-module>
+
+    <!-- 
+      android platform
+      -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WebPageManagerPlugin" >
+              <param name="android-package" value="plugins.WebPageManager.WebPageManagerPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/plugins/WebPageManager/IBrowserDialogControlListener.java" target-dir="src/plugins/WebPageManager/" /> 
+        <source-file src="src/android/plugins/WebPageManager/WebPageManagerDialog.java" target-dir="src/plugins/WebPageManager/" /> 
+        <source-file src="src/android/plugins/WebPageManager/WebPageManagerPlugin.java" target-dir="src/plugins/WebPageManager/" /> 
+        <source-file src="src/android/plugins/WebPageManager/WebPageManagerWebView.java" target-dir="src/plugins/WebPageManager/" /> 
+        <source-file src="src/android/plugins/WebPageManager/UrlHelper.java" target-dir="src/plugins/WebPageManager/" /> 
+        <source-file src="src/android/plugins/WebPageManager/Cookie.java" target-dir="src/plugins/WebPageManager/" /> 
+
+    </platform>
+
+</plugin>
