@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="Loading"
+    version="0.0.1">
+
+    <name>Loading</name>
+    <description>Loading Plugin</description>
+    <author>Oscar Brito</author>
+    <keywords>loading</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=2.2.0" />
+    </engines>
+
+    <js-module src="www/LoadingPlugin.js" name="plugin"></js-module>
+
+    <!-- 
+      android platform
+      -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LoadingPlugin" >
+              <param name="android-package" value="plugins.LoadingPlugin.LoadingPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/plugins/LoadingPlugin/LoadingPlugin.java" target-dir="src/plugins/LoadingPlugin/" /> 
+
+    </platform>
+
+</plugin>
