@@ -1,2 +1,10 @@
 
-# Plugin Name
+# Cordova Plugin - Loading
+
+
+## Integration Testing
+
+´´´
+
+
+´´´

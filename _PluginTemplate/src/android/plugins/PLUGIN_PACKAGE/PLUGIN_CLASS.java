@@ -1,20 +1,28 @@
-package com.custom.plugin;
+package plugins.LoadingPlugin;
 
-import android.content.Context;
-import android.view.inputmethod.InputMethodManager;
-
+import android.app.ProgressDialog;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 
-/**
- * Keyboard Manager plugin to Phonegap
+/*
+ * Loading cordova plugin
+ *
+ *
  */
-public class Plugin extends CordovaPlugin {
+public class PLUGIN_CLASS extends CordovaPlugin {
 
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+
+        action = action.toLowerCase();
+
+
+        if(action.equals("run")){
+            return true;
+        };
+
 
         return true;
 

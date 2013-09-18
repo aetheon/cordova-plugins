@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="PluginName"
+    id="PLUGIN_NAME"
     version="0.0.1">
 
-    <name></name>
+    <name>PLUGIN_NAME</name>
     <description></description>
     <author></author>
     <keywords></keywords>
@@ -13,20 +13,20 @@
         <engine name="cordova" version=">=2.2.0" />
     </engines>
 
-
-    <!-- assets to be copied -->
-    <asset src="www/PLUGIN.js" target="plugins/PLUGIN.js" />
+    <js-module src="www/PLUGIN_NAME.js" name="plugin"></js-module>
 
     <!-- 
       android platform
       -->
     <platform name="android">
 
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="PLUGIN" value="com.custom.PLUGIN.PLUGIN"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PLUGIN_NAME" >
+              <param name="android-package" value="plugins.PLUGIN_PACKAGE.PLUGIN_CLASS"/>
+            </feature>
         </config-file>
 
-        <source-file src="src/android/com/custom/PLUGIN/PLUGIN.java" target-dir="src/com/custom/PLUGIN/" /> 
+        <source-file src="src/android/plugins/PLUGIN_PACKAGE/PLUGIN_CLASS.java" target-dir="src/plugins/PLUGIN_NAME/" /> 
 
     </platform>
 
