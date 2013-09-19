@@ -9,15 +9,15 @@ Javascript tests are included ( jshint + jasmine )
 
 ## Plugins Available:
 
-    * DatePicker
+### DatePicker
 
-    * Keyboard
+### Keyboard
 
-    * Loading
+### Loading
 
-    * Share
+### Share
 
-    * WebPageManager
+### WebPageManager
 
 
 ## Build Solution
