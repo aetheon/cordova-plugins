@@ -5,7 +5,7 @@
 Collection of cordova 3.0 compatible plugins. Each plugin is self contained meant to be available on 
 its own repository.
 
-Javascript tests are included.
+Javascript tests are included ( jshint + jasmine )
 
 ## Plugins Available:
 
