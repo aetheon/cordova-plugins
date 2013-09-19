@@ -68,6 +68,18 @@ module.exports = function (grunt) {
                 cmd: 'grunt',
                 cwd: 'WebPageManager',
                 exitCode: 0
+            },
+
+
+            'install.Share': {
+                cmd: 'npm install -l',
+                cwd: 'Share',
+                exitCode: 0
+            },
+            'build.Share': {
+                cmd: 'grunt',
+                cwd: 'Share',
+                exitCode: 0
             }
 
 
@@ -98,7 +110,10 @@ module.exports = function (grunt) {
             "exec:build.Keyboard",
 
             "exec:install.WebPageManager",
-            "exec:build.WebPageManager"
+            "exec:build.WebPageManager",
+
+            "exec:install.Share",
+            "exec:build.Share"
             
         ]);
 

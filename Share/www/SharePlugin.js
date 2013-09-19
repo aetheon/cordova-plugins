@@ -18,7 +18,7 @@
 
 var exec = require('cordova/exec'),
     // name used on config.xml
-    PLUGIN_NAME = "PLUGIN_NAME";
+    PLUGIN_NAME = "SharePlugin";
 
 
 /*
@@ -27,16 +27,38 @@ var exec = require('cordova/exec'),
  * @constructor
  *
  */
-var Plugin = function(){
+var Plugin = {
 
-    exec(
-        callback,
-        callback,
 
-        PLUGIN_NAME,
-        "run",
+    /*
+     * show the native share window
+     * 
+     * @param {Object} options - The options for this operation
+     *                  { message: , error: }
+     */
+    share: function(options){
 
-        []);
+        options = options || {};
+
+        var msg = {
+            title: options.title,
+            text: options.text
+        };
+            
+        var error = options.error || function(){};
+
+        exec(
+            function(){},
+            error,
+
+            PLUGIN_NAME,
+            "share",
+
+            [ msg ]);
+
+    }
+
+    
 
 };
 

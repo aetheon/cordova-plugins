@@ -6,7 +6,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 
 /*
- * Loading cordova plugin
+ * cordova plugin
  *
  *
  */
