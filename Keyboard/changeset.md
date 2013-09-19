@@ -1,3 +1,3 @@
 --
-## 16-08-2013
-* Created plugin to handle keyboard show / hide operations
+## 00-00-0000
+* Big Bang

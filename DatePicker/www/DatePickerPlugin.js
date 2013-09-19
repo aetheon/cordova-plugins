@@ -81,14 +81,14 @@ try{
     // if module exists means that we are inside a define 
     // statement
     if (module && module.exports) {
-        module.exports = Plugin;
+        module.exports = DatePicker;
     }
 }catch(e){
 
     // module is not undefined - means that we are being load 
     // outside a define statement
     if(define)
-        define(PLUGIN_NAME, [], function(){ return Plugin; });
+        define(PLUGIN_NAME, [], function(){ return DatePicker; });
 
 }
 

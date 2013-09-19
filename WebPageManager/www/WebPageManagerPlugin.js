@@ -1,9 +1,24 @@
 ﻿
 
+/*
+ * Cordova / Phonegap Javascript Plugin API
+ * 
+ * When running with plugman this script will live as a cordova AMD module as:
+ *
+ *      cordova.define("PLUGIN_NAME.plugin", function(require, exports, module) { }
+ *
+ *      The definitions for the define name are included in plugin.xml:
+ *      <plugin id="PLUGIN_NAME" ...>
+ *            <js-module src="FILE" name="plugin"></js-module>
+ *
+ * Oscar Brito - @aetheon
+ *
+ */
+
 
 
 var exec = require('cordova/exec'),
-    _PLUGIN_NAME = "WebPageManagerPlugin";
+    PLUGIN_NAME = "WebPageManagerPlugin";
 
 
 /*
@@ -31,7 +46,7 @@ WebPageManagerPlugin.prototype = {
             callback,
             callback,
 
-            _PLUGIN_NAME,
+            PLUGIN_NAME,
             "showDialog",
             
             // add the close url's after the url argument
@@ -51,7 +66,7 @@ WebPageManagerPlugin.prototype = {
         exec(
             success,
             failure,
-            _PLUGIN_NAME,
+            PLUGIN_NAME,
             "getCookie",
             [
                 this.url,
@@ -63,6 +78,28 @@ WebPageManagerPlugin.prototype = {
 
 };
 
-if (module.exports) {
-  module.exports = WebPageManagerPlugin;
+
+
+
+
+// AMD loading
+//
+// Lets try to load the plugin on different context. In other words
+// without and with require.js
+//
+
+try{
+    // if module exists means that we are inside a define 
+    // statement
+    if (module && module.exports) {
+        module.exports = WebPageManagerPlugin;
+    }
+}catch(e){
+
+    // module is not undefined - means that we are being load 
+    // outside a define statement
+    if(define)
+        define(PLUGIN_NAME, [], function(){ return WebPageManagerPlugin; });
+
 }
+

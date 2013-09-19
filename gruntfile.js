@@ -44,7 +44,33 @@ module.exports = function (grunt) {
                 cmd: 'grunt',
                 cwd: 'Loading',
                 exitCode: 0
+            },
+
+
+            'install.Keyboard': {
+                cmd: 'npm install -l',
+                cwd: 'Keyboard',
+                exitCode: 0
+            },
+            'build.Keyboard': {
+                cmd: 'grunt',
+                cwd: 'Keyboard',
+                exitCode: 0
+            },
+
+
+            'install.WebPageManager': {
+                cmd: 'npm install -l',
+                cwd: 'WebPageManager',
+                exitCode: 0
+            },
+            'build.WebPageManager': {
+                cmd: 'grunt',
+                cwd: 'WebPageManager',
+                exitCode: 0
             }
+
+
 
         }
         
@@ -66,8 +92,13 @@ module.exports = function (grunt) {
             "exec:build.DatePicker",
 
             "exec:install.Loading",
-            "exec:build.Loading"
+            "exec:build.Loading",
 
+            "exec:install.Keyboard",
+            "exec:build.Keyboard",
+
+            "exec:install.WebPageManager",
+            "exec:build.WebPageManager"
             
         ]);
 

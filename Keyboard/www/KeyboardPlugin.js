@@ -1,5 +1,20 @@
 
 
+/*
+ * Cordova / Phonegap Javascript Plugin API
+ * 
+ * When running with plugman this script will live as a cordova AMD module as:
+ *
+ *      cordova.define("PLUGIN_NAME.plugin", function(require, exports, module) { }
+ *
+ *      The definitions for the define name are included in plugin.xml:
+ *      <plugin id="PLUGIN_NAME" ...>
+ *            <js-module src="FILE" name="plugin"></js-module>
+ *
+ * Oscar Brito - @aetheon
+ *
+ */
+
 
 var exec = require('cordova/exec');
 
@@ -9,7 +24,7 @@ var exec = require('cordova/exec');
  */
 var Keyboard = function () { };
 
-Keyboard._PLUGIN_NAME = "Keyboard";
+var PLUGIN_NAME = "KeyboardPlugin";
 
 
 /*
@@ -20,7 +35,7 @@ Keyboard.show = function (url, eventfn) {
     exec(
         eventfn,
         eventfn, // the same on purpouse
-        Keyboard._PLUGIN_NAME,
+        PLUGIN_NAME,
         "show",
         [
             url
@@ -37,7 +52,7 @@ Keyboard.hide = function (url, eventfn) {
     exec(
         eventfn,
         eventfn, // the same on purpouse
-        Keyboard._PLUGIN_NAME,
+        PLUGIN_NAME,
         "hide",
         [
             url
@@ -46,12 +61,24 @@ Keyboard.hide = function (url, eventfn) {
 };
 
 
-/*
- * Maintain API consistency with iOS
- */
-Keyboard.prototype.install = function () {};
 
+// AMD loading
+//
+// Lets try to load the plugin on different context. In other words
+// without and with require.js
+//
 
-if (module.exports) {
-  module.exports = Keyboard;
+try{
+    // if module exists means that we are inside a define 
+    // statement
+    if (module && module.exports) {
+        module.exports = Keyboard;
+    }
+}catch(e){
+
+    // module is not undefined - means that we are being load 
+    // outside a define statement
+    if(define)
+        define(PLUGIN_NAME, [], function(){ return Keyboard; });
+
 }

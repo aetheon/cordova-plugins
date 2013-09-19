@@ -1,0 +1,28 @@
+{
+  
+  "name": "cordova-plugin-keyboard",
+  "author": "Oscar Brito <aetheon@gmail.com>",
+  "version": "0.0.1",
+
+  "dependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-jasmine": "*",
+    "grunt-template-jasmine-requirejs": "*",
+    "grunt-exec": "*",
+    "grunt-http-server": "*"
+  },
+ 
+  "devDependencies": {
+  },
+
+  "engines": {
+    "node": ">=0.8.0"
+  },
+
+  "scripts": {
+    "test": "grunt --verbose"
+  }
+  
+}
