@@ -31,6 +31,9 @@ Javascript tests are included ( jshint + jasmine )
 ```
 
 
+---
+
+
 >
 > Oscar Brito - @aetheon
 >
